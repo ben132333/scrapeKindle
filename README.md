@@ -16,6 +16,6 @@ index.js is the code that scrapes the hightlights.
 
 We use dotenv to store and use environment variables.  
 
-Create a local .env file in the root of this project with the following variables:
-`EMAIL="YOUR1EMAIL"
+Create a local .env file in the root of this project with the following variables:   
+`EMAIL="YOUR1EMAIL"   
 EMAIL_PASSWORD="YOUR1PASSWORD"`   
