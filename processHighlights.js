@@ -6,6 +6,9 @@ function importHighlights() {
 }
 
 const highlights = importHighlights();
+console.log('Total number of books highlighted in:', Object.keys(highlights).length);
+console.log();
+
 const bookHighlightCount = {};
 for (const book in highlights) {
     bookHighlightCount[book] = highlights[book].length;
@@ -13,7 +16,38 @@ for (const book in highlights) {
 
 const sortedBookHighlightCount = Object.entries(bookHighlightCount).sort((a, b) => b[1] - a[1]);
 
+console.log('Top 5 most highlighted books:');
 const top5Highlights = sortedBookHighlightCount.slice(0, 5);
 top5Highlights.forEach((book) => {
-    console.log(`${book[0]}: ${book[1]}`);
+    console.log(`- ${book[0]}: ${book[1]}`);
 });
+console.log();
+
+// Get random book and highlight
+function getRandomInt(N) {
+    return Math.floor(N * Math.random());
+}
+
+function getRandomBook(highlights) {
+    const BookArray = Object.keys(highlights);
+    const nrBooks = BookArray.length;
+    const randomIndex = getRandomInt(nrBooks);
+
+    return BookArray[randomIndex];
+}
+
+function getRandomHighlights(book) {
+    const bookHighlights = highlights[book];
+    const randomIndex = getRandomInt(bookHighlights.length);
+
+    return highlights[book][randomIndex];
+}
+
+const book = getRandomBook(highlights);
+console.log('Random book:', book);
+console.log();
+
+const randomHighlights = getRandomHighlights(book);
+console.log('Random highlights:');
+console.log(randomHighlights);
+console.log();
