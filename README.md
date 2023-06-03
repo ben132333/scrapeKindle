@@ -14,7 +14,7 @@ index.js is the code that scrapes the hightlights.
 
 ### How to run it yourself
 
-> node --version
+> node --version  
 > v16.14.2
 
 #### Set up environment variables
