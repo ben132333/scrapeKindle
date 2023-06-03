@@ -51,3 +51,11 @@ const randomHighlights = getRandomHighlights(book);
 console.log('Random highlights:');
 console.log(randomHighlights);
 console.log();
+
+/*
+Ideas for future:
+- query a random quote from Roam or Logsec
+- query two random quotes, merge the two ideas in your own words. Save the result.
+- Can I save the highlights on IPFS or Arweave and query them from there?
+- Can I host the API on polygon so you get a random quote by sending a transaction?
+*/
